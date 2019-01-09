@@ -29,6 +29,8 @@ QString StDoc::rootDir()
 {
    QString s;
    s = getenv(LIC_ROOT_PATH);
+  // qDebug() << "$LIC_ROOT_PATH =" << s;
+  //  qDebug() << "$ME =" << getenv("HOME") << getenv("LIC_ROOT_PATH");
    if (s == "")  s = ".";
    return s;
 }

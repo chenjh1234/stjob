@@ -54,6 +54,11 @@ void ParamWin::getData()
     DOC->_startDate = ui.startDate->date();
     DOC->_endDate = ui.endDate->date();
 
+    DOC->_venderList.clear();
+    DOC->_packageList.clear();
+    DOC->_userList.clear();
+
+
     str = ui.lineEditVender->text();
     if (!str.isEmpty() )
         DOC->_venderList = str.split(","); 
@@ -82,7 +87,7 @@ void ParamWin::getFiles()
  
      i = 0;
    // get files:
-    while (s < e) 
+    while (s <= e) 
     {
         dt.setDate(s);
         m = fd.DT(dt).left(6);
@@ -102,7 +107,7 @@ void ParamWin::getFiles()
     i = 0;
     s = DOC->_startDate;
     e = DOC->_endDate;
-   while (s < e) 
+   while (s <= e) 
    {
        dt.setDate(s);
        m = fd.DT(dt).left(8);

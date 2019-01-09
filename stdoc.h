@@ -9,13 +9,13 @@
 //#include "LLicEncrypt.h"
 using namespace std;
 #define ORG_NAME "STAPP"
-#define APP_NAME "stapp"
+#define APP_NAME "stjob"
 #define APP_VERSION "1.001"
 #define APP_DATE " 2017.10.1 "
 //
-#define CMD_SHOWPDF "evince "
+#define CMD_SHOWPDF "showpdf "
 
-#define LIC_ROOT_PATH "LIC_ROOT" //  licdatadir 
+#define LIC_ROOT_PATH "LIC_ROOT_PATH" //  licdatadir 
 #define LIC_LOG_PATH "log" //  $LIC_ROOT/log
 #define LIC_FILE_PATH "file" //  $LIC_ROOT/log
 #define ALOG "ALOG"

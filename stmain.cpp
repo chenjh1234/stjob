@@ -473,12 +473,27 @@ void StMain::draw(int i,QString key)
     drawWin->setFitWin();
     //drawWin->setScale(4,4);
     drawWin->setLabX(buf,i);
-    drawWin->setGrid(5,10);
+    float xx,yy;
+    drawWin->getScale(xx,yy);
+    int s,l,sx,lx;
+    s= 10;     // short line label of x,y
+    l = 20;   // long line label of x
+    lx = 100;//long line label x
+
+    drawWin->setGrid(s/xx,lx/xx,s/yy,l/yy);
     
     drawWin->setCoordinate(RIGHT_UP);
     drawWin->startDraw(DOC->_buf, DOC->_lenBuf, key); 
+       drawWin->show();
+    drawWin->reDraw();    
+#if 10 // 2 times: aviod label confused;
+    drawWin->getScale(xx,yy);
+    drawWin->setGrid(s/xx,lx/xx,s/yy,l/yy);
+    drawWin->startDraw(DOC->_buf, DOC->_lenBuf, key); 
   
-    drawWin->show();    
+    drawWin->show();
+    drawWin->reDraw();  
+    #endif  
     delete []buf;
 }
  

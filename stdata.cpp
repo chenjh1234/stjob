@@ -1,4 +1,4 @@
-#include "StData.h"
+#include "stdata.h"
 QString StData::report( ST * item)
 {
     QString s;

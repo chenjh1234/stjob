@@ -8,7 +8,7 @@ using namespace std;
 
 int main (int argc, char *argv[])
 {
-    cout << "hello world" << endl;       
+    //cout << "hello world" << endl;       
     QString qstr;
     StApp  app(argc, argv);
     app.setOrganizationName(ORG_NAME);
